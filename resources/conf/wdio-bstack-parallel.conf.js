@@ -11,7 +11,7 @@ var overrides = {
     './src/test/suites/e2e/*.js',
     './src/test/suites/user/*.js'
   ],
-  host: 'hub.browserstack.com',
+  hostname: 'hub.browserstack.com',
   commonCapabilities: {
     'browserstack.debug': true,
     'browserstack.video': true,
