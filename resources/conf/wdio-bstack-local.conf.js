@@ -10,7 +10,7 @@ var overrides = {
   specs: [
     './src/test/suites/e2e/e2e.spec.js'
   ],
-  host: 'hub.browserstack.com',
+  hostname: 'hub.browserstack.com',
   baseUrl: 'http://localhost:3000/',
   waitforTimeout: 50000,
   capabilities: [{

@@ -7,7 +7,7 @@ var overrides = {
   specs: [
     './src/test/suites/e2e/e2e.spec.js'
   ],
-  host: 'hub.browserstack.com',
+  hostname: 'hub.browserstack.com',
   capabilities: [{
     maxInstances: 1,
     //'browserstack.maskCommands':'setValues, getValues, setCookies, getCookies',
