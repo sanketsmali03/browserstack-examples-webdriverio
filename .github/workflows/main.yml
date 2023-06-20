@@ -22,12 +22,21 @@ jobs:
         env:
           BROWSERSTACK_USERNAME: ${{ secrets.BROWSERSTACK_USERNAME }}
           BROWSERSTACK_ACCESS_KEY: ${{ secrets.BROWSERSTACK_ACCESS_KEY }}
-      - uses: actions/checkout@v3
+      
+      - name: Checkout code
+        uses: actions/checkout@v3
+      
       - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v3
         with:
           node-version: ${{ matrix.node-version }}
           cache: 'npm'
-      - run: npm uninstall --save-dev fibers
-      - run: npm install 
-      - run: npm run bstack-single
+      
+      - name: Uninstall fibers package
+        run: npm uninstall --save-dev fibers
+      
+      - name: Install dependencies
+        run: npm install 
+      
+      - name: Run bstack-single
+        run: npm run bstack-single
